@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>To-Do List Manager</h1>
+
+    <div class="input-box">
+        <input type="text" id="taskInput" placeholder="Enter a task">
+        <button onclick="addTask()">Add TO-DO</button>
+    </div>
+
+    <ul id="taskList"></ul>
+
+    <button class="remove-btn" onclick="removeLastTask()">
+        Remove Last Task
+    </button>
+
+    <h3 id="counter">0 Task(s) Remaining</h3>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
