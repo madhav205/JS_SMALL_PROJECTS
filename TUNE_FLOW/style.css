@@ -1,0 +1,672 @@
+/* ===========================
+        GOOGLE FONT
+=========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f4f7fb;
+    color:#222;
+    transition:.4s;
+}
+
+/* ===========================
+        NAVBAR
+=========================== */
+
+.navbar{
+
+    padding:18px;
+
+    border-bottom:4px solid #1db954;
+
+}
+
+.navbar-brand{
+
+    letter-spacing:1px;
+
+}
+
+#themeBtn{
+
+    width:45px;
+
+    height:45px;
+
+}
+
+/* ===========================
+        HEADING
+=========================== */
+
+h1{
+
+    font-weight:700;
+
+}
+
+.text-secondary{
+
+    font-size:17px;
+
+}
+
+/* ===========================
+        CARD
+=========================== */
+
+.card{
+
+    border:none;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    transition:.35s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 15px 30px rgba(0,0,0,.12);
+
+}
+
+/* ===========================
+        STATS CARD
+=========================== */
+
+.stat-card{
+
+    text-align:center;
+
+    padding:25px;
+
+    background:white;
+
+}
+
+.stat-card h2{
+
+    font-size:34px;
+
+    margin-top:12px;
+
+    margin-bottom:5px;
+
+    font-weight:700;
+
+}
+
+.stat-card p{
+
+    color:gray;
+
+    margin-bottom:0;
+
+}
+
+/* ===========================
+        FORM
+=========================== */
+
+.form-control{
+
+    border-radius:12px;
+
+    padding:12px;
+
+    border:2px solid #ececec;
+
+    transition:.3s;
+
+}
+
+.form-control:focus{
+
+    border-color:#1db954;
+
+    box-shadow:none;
+
+}
+
+/* ===========================
+        BUTTONS
+=========================== */
+
+.btn{
+
+    border-radius:12px;
+
+    padding:10px 18px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.btn:hover{
+
+    transform:scale(1.03);
+
+}
+
+.btn-success{
+
+    background:#1db954;
+
+    border:none;
+
+}
+
+.btn-success:hover{
+
+    background:#17a74a;
+
+}
+
+.btn-primary{
+
+    border:none;
+
+}
+
+.btn-danger{
+
+    border:none;
+
+}
+
+/* ===========================
+        SONG LIST
+=========================== */
+
+#songList{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.song{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px;
+
+    background:white;
+
+    border-radius:16px;
+
+    box-shadow:0 6px 18px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.song:hover{
+
+    transform:translateX(6px);
+
+}
+
+.song-left{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+.song-icon{
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:50%;
+
+    background:#1db954;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:24px;
+
+}
+
+.song-details h5{
+
+    margin:0;
+
+    font-size:20px;
+
+    font-weight:600;
+
+}
+
+.song-details p{
+
+    margin:0;
+
+    color:gray;
+
+}
+
+.song-details small{
+
+    color:#999;
+
+}
+
+.song-right{
+
+    display:flex;
+
+    gap:10px;
+
+}
+
+/* ===========================
+        BADGE
+=========================== */
+
+.badge{
+
+    padding:10px 18px;
+
+    font-size:15px;
+
+    border-radius:10px;
+
+}
+
+/* ===========================
+        TOAST
+=========================== */
+
+.toast{
+
+    border-radius:15px;
+
+    overflow:hidden;
+
+}
+
+.toast-header{
+
+    background:#1db954;
+
+    color:white;
+
+}
+
+.toast-body{
+
+    font-weight:500;
+
+}
+
+/* ===========================
+        PLAYING SONG
+=========================== */
+
+.playing{
+
+    border-left:6px solid #1db954;
+
+    background:#ecfff3;
+
+}
+
+.playing .song-icon{
+
+    animation:pulse 1.2s infinite;
+
+}
+
+@keyframes pulse{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.15);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+/* ===========================
+        FAVOURITE
+=========================== */
+
+.favourite{
+
+    color:red !important;
+
+}
+
+.heart-btn{
+
+    transition:.3s;
+
+}
+
+.heart-btn:hover{
+
+    transform:scale(1.2);
+
+}
+
+/* ===========================
+        EMPTY QUEUE
+=========================== */
+
+.empty{
+
+    text-align:center;
+
+    padding:50px;
+
+    color:gray;
+
+}
+
+.empty i{
+
+    font-size:70px;
+
+    color:#1db954;
+
+    margin-bottom:20px;
+
+}
+
+/* ===========================
+        DARK MODE
+=========================== */
+
+.dark{
+
+    background:#121212;
+
+    color:white;
+
+}
+
+.dark .card{
+
+    background:#1d1d1d;
+
+    color:white;
+
+}
+
+.dark .stat-card{
+
+    background:#1d1d1d;
+
+}
+
+.dark .song{
+
+    background:#242424;
+
+    color:white;
+
+}
+
+.dark .song p{
+
+    color:#cfcfcf;
+
+}
+
+.dark .song small{
+
+    color:#9f9f9f;
+
+}
+
+.dark .form-control{
+
+    background:#2b2b2b;
+
+    color:white;
+
+    border-color:#444;
+
+}
+
+.dark .form-control::placeholder{
+
+    color:#aaa;
+
+}
+
+.dark .navbar{
+
+    background:#000 !important;
+
+}
+
+.dark .toast-header{
+
+    background:#1db954;
+
+}
+
+.dark .playing{
+
+    background:#183424;
+
+}
+
+/* ===========================
+        SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#1db954;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#ddd;
+
+}
+
+/* ===========================
+        RESPONSIVE
+=========================== */
+
+@media(max-width:992px){
+
+    .song{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:15px;
+
+    }
+
+    .song-right{
+
+        width:100%;
+
+        justify-content:flex-end;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    h1{
+
+        font-size:30px;
+
+    }
+
+    .stat-card{
+
+        margin-bottom:20px;
+
+    }
+
+    .song-icon{
+
+        width:50px;
+
+        height:50px;
+
+        font-size:20px;
+
+    }
+
+}
+
+@media(max-width:576px){
+
+    .navbar-brand{
+
+        font-size:24px !important;
+
+    }
+
+    .song-details h5{
+
+        font-size:17px;
+
+    }
+
+    .song-right{
+
+        flex-wrap:wrap;
+
+    }
+
+    .btn{
+
+        width:100%;
+
+    }
+
+}
+
+/* ===========================
+        ANIMATIONS
+=========================== */
+
+.fade-in{
+
+    animation:fade .4s ease;
+
+}
+
+@keyframes fade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(15px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.rotate{
+
+    animation:rotate .5s;
+
+}
+
+@keyframes rotate{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(180deg);
+
+    }
+
+}
+
+/* ===========================
+        FOOTER
+=========================== */
+
+footer{
+
+    text-align:center;
+
+    padding:30px;
+
+    color:gray;
+
+    font-size:15px;
+
+}

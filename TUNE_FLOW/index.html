@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TuneFlow | Music Queue</title>
+
+    <!-- Bootstrap -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+
+        <div class="container">
+
+            <a class="navbar-brand fw-bold fs-2" href="#">
+
+                🎵 TuneFlow
+
+            </a>
+
+            <button class="btn btn-outline-light" id="themeBtn">
+
+                <i class="bi bi-moon-fill"></i>
+
+            </button>
+
+        </div>
+
+    </nav>
+
+
+
+
+
+    <div class="container py-5">
+
+        <!-- Heading -->
+
+        <div class="text-center mb-5">
+
+            <h1 class="fw-bold">
+
+                Music Queue Manager
+
+            </h1>
+
+            <p class="text-secondary">
+
+                Organize your favourite songs with ease.
+
+            </p>
+
+        </div>
+
+
+
+
+
+        <!-- Statistics -->
+
+        <div class="row g-4 mb-5">
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="card stat-card">
+
+                    <div class="card-body">
+
+                        <i class="bi bi-music-note-beamed fs-1 text-success"></i>
+
+                        <h2 id="totalSongs">
+
+                            0
+
+                        </h2>
+
+                        <p>Total Songs</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="card stat-card">
+
+                    <div class="card-body">
+
+                        <i class="bi bi-clock fs-1 text-primary"></i>
+
+                        <h2 id="queueTime">
+
+                            0 min
+
+                        </h2>
+
+                        <p>Queue Time</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="card stat-card">
+
+                    <div class="card-body">
+
+                        <i class="bi bi-play-circle-fill fs-1 text-danger"></i>
+
+                        <h2 id="playingSong">
+
+                            None
+
+                        </h2>
+
+                        <p>Now Playing</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="card stat-card">
+
+                    <div class="card-body">
+
+                        <i class="bi bi-heart-fill fs-1 text-warning"></i>
+
+                        <h2 id="favSongs">
+
+                            0
+
+                        </h2>
+
+                        <p>Favourite Songs</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+        <div class="row">
+
+            <!-- Left -->
+
+            <div class="col-lg-4">
+
+                <!-- Add Song -->
+
+                <div class="card shadow-lg mb-4">
+
+                    <div class="card-body">
+
+                        <h4 class="mb-4">
+
+                            Add New Song
+
+                        </h4>
+
+                        <input
+                            type="text"
+                            class="form-control mb-3"
+                            id="songName"
+                            placeholder="Song Name">
+
+                        <input
+                            type="text"
+                            class="form-control mb-3"
+                            id="artist"
+                            placeholder="Artist Name">
+
+                        <input
+                            type="text"
+                            class="form-control mb-3"
+                            id="duration"
+                            placeholder="Duration (3:45)">
+
+                        <button
+                            class="btn btn-success w-100"
+                            id="addBtn">
+
+                            <i class="bi bi-plus-circle"></i>
+
+                            Add Song
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+
+
+                <!-- Search -->
+
+                <div class="card shadow-lg mb-4">
+
+                    <div class="card-body">
+
+                        <h4>
+
+                            Search
+
+                        </h4>
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="searchBox"
+                            placeholder="Search song...">
+
+                    </div>
+
+                </div>
+
+
+
+
+
+                <!-- Queue Controls -->
+
+                <div class="card shadow-lg">
+
+                    <div class="card-body">
+
+                        <h4>
+
+                            Queue Controls
+
+                        </h4>
+
+
+
+                        <div class="d-grid gap-2">
+
+                            <button class="btn btn-primary" id="playNextBtn">
+
+                                <i class="bi bi-skip-forward-fill"></i>
+
+                                Play Next
+
+                            </button>
+
+                            <button class="btn btn-danger" id="clearBtn">
+
+                                <i class="bi bi-trash-fill"></i>
+
+                                Clear Queue
+
+                            </button>
+
+                        </div>
+                        
+        <h4>Music Player</h4>
+        <audio id="audioPlayer" controls class="w-100"></audio>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+
+
+            <!-- Right -->
+
+            <div class="col-lg-8">
+
+                <div class="card shadow-lg">
+
+                    <div class="card-body">
+
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+
+                            <h3>
+
+                                Music Queue
+
+                            </h3>
+
+                            <span
+                                class="badge bg-success"
+                                id="queueBadge">
+
+                                0 Songs
+
+                            </span>
+
+                        </div>
+
+                        <hr>
+
+                        <!-- Song List -->
+
+                        <div id="songList">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Toast -->
+
+        <div
+            class="toast position-fixed bottom-0 end-0 m-4"
+            id="toast"
+            role="alert">
+
+            <div class="toast-header">
+
+                <strong class="me-auto">
+
+                    TuneFlow
+
+                </strong>
+
+                <button
+                    class="btn-close"
+                    data-bs-dismiss="toast">
+
+                </button>
+
+            </div>
+
+            <div class="toast-body">
+
+                Song Added Successfully 🎵
+
+            </div>
+
+        </div>
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
