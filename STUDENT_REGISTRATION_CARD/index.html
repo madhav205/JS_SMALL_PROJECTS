@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Student Registration</h2>
+
+        <input type="text" id="name" placeholder="Enter Name">
+        <input type="number" id="age" placeholder="Enter Age">
+        <input type="text" id="course" placeholder="Enter Course">
+
+        <button onclick="registerStudent()">Submit</button>
+    </div>
+
+    <div class="card" id="card">
+        <h2>Student Profile</h2>
+
+        <p><strong>Name:</strong> <span id="studentName"></span></p>
+        <p><strong>Age:</strong> <span id="studentAge"></span></p>
+        <p><strong>Course:</strong> <span id="studentCourse"></span></p>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
